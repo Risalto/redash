@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "rm -rf ./client/dist/ && NODE_ENV=production node node_modules/.bin/webpack",
-    "watch": "webpack --watch --progress --colors -d"
+    "watch": "webpack --watch --progress --colors -d",
+    "heroku-postbuild": "npm install --dev && npm run bower install && npm run build && npm prune --production"
   },
   "repository": {
     "type": "git",
